@@ -119,21 +119,66 @@
             </objects>
             <point key="canvasLocation" x="449" y="833"/>
         </scene>
-        <!--View Controller-->
+        <!--Locations List View Controller-->
         <scene sceneID="is7-z8-XmO">
             <objects>
-                <viewController id="r5b-MO-U4h" sceneMemberID="viewController">
+                <viewController id="r5b-MO-U4h" customClass="LocationsListViewController" customModule="On_The_Map" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nvo-8h-det">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pDe-Re-7vZ">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="locationCell" textLabel="wEh-Po-3LT" detailTextLabel="y4P-cM-sFm" style="IBUITableViewCellStyleSubtitle" id="a5t-Cc-dbK">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="a5t-Cc-dbK" id="6C8-vu-UVl">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wEh-Po-3LT">
+                                                    <rect key="frame" x="15" y="5" width="33.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="y4P-cM-sFm">
+                                                    <rect key="frame" x="15" y="25.5" width="44" height="14.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="r5b-MO-U4h" id="nYM-mT-Hu6"/>
+                                    <outlet property="delegate" destination="r5b-MO-U4h" id="EN5-Df-glk"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="pDe-Re-7vZ" firstAttribute="leading" secondItem="UoM-nD-106" secondAttribute="leading" id="6G7-AJ-7Qo"/>
+                            <constraint firstItem="pDe-Re-7vZ" firstAttribute="trailing" secondItem="UoM-nD-106" secondAttribute="trailing" id="9Kf-md-ala"/>
+                            <constraint firstItem="pDe-Re-7vZ" firstAttribute="top" secondItem="UoM-nD-106" secondAttribute="top" id="YYP-FK-Aii"/>
+                            <constraint firstItem="pDe-Re-7vZ" firstAttribute="bottom" secondItem="UoM-nD-106" secondAttribute="bottom" id="p6r-tc-w4W"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="UoM-nD-106"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="icon_listview-deselected" id="w51-yT-E3Z"/>
+                    <connections>
+                        <outlet property="table" destination="pDe-Re-7vZ" id="szd-hT-gNI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FMd-cN-DBb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1977" y="460"/>
+            <point key="canvasLocation" x="1976.8" y="459.22038980509751"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="Ygy-ZW-B3h">

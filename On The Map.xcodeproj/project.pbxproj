@@ -19,6 +19,7 @@
 		14AC5D21219EA7C00036026D /* AppValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AC5D20219EA7C00036026D /* AppValues.swift */; };
 		14AC5D23219EB6FA0036026D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AC5D22219EB6FA0036026D /* MapViewController.swift */; };
 		14AC5D26219EC4A20036026D /* ParseNetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AC5D25219EC4A20036026D /* ParseNetworkingManager.swift */; };
+		14AC5D28219ED3BA0036026D /* LocationsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AC5D27219ED3BA0036026D /* LocationsListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		14AC5D20219EA7C00036026D /* AppValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppValues.swift; sourceTree = "<group>"; };
 		14AC5D22219EB6FA0036026D /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		14AC5D25219EC4A20036026D /* ParseNetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseNetworkingManager.swift; sourceTree = "<group>"; };
+		14AC5D27219ED3BA0036026D /* LocationsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				14AC5D03219DF47E0036026D /* LoginViewController.swift */,
 				14AC5D22219EB6FA0036026D /* MapViewController.swift */,
+				14AC5D27219ED3BA0036026D /* LocationsListViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 				14AC5D02219DF47E0036026D /* AppDelegate.swift in Sources */,
 				14AC5D19219DF6FB0036026D /* Constants.swift in Sources */,
 				14AC5D23219EB6FA0036026D /* MapViewController.swift in Sources */,
+				14AC5D28219ED3BA0036026D /* LocationsListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
