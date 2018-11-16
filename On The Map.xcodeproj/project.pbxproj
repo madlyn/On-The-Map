@@ -14,6 +14,9 @@
 		14AC5D0C219DF47F0036026D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14AC5D0A219DF47F0036026D /* LaunchScreen.storyboard */; };
 		14AC5D17219DF6440036026D /* StudentLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AC5D16219DF6440036026D /* StudentLocation.swift */; };
 		14AC5D19219DF6FB0036026D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AC5D18219DF6FB0036026D /* Constants.swift */; };
+		14AC5D1D219E0C0B0036026D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AC5D1C219E0C0B0036026D /* NetworkManager.swift */; };
+		14AC5D1F219E0CEC0036026D /* UdacityNetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AC5D1E219E0CEC0036026D /* UdacityNetworkingManager.swift */; };
+		14AC5D21219EA7C00036026D /* AppValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AC5D20219EA7C00036026D /* AppValues.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		14AC5D0D219DF47F0036026D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14AC5D16219DF6440036026D /* StudentLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentLocation.swift; sourceTree = "<group>"; };
 		14AC5D18219DF6FB0036026D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		14AC5D1C219E0C0B0036026D /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		14AC5D1E219E0CEC0036026D /* UdacityNetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UdacityNetworkingManager.swift; sourceTree = "<group>"; };
+		14AC5D20219EA7C00036026D /* AppValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppValues.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +79,9 @@
 			children = (
 				14AC5D16219DF6440036026D /* StudentLocation.swift */,
 				14AC5D18219DF6FB0036026D /* Constants.swift */,
+				14AC5D1C219E0C0B0036026D /* NetworkManager.swift */,
+				14AC5D1E219E0CEC0036026D /* UdacityNetworkingManager.swift */,
+				14AC5D20219EA7C00036026D /* AppValues.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -174,7 +183,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				14AC5D17219DF6440036026D /* StudentLocation.swift in Sources */,
+				14AC5D1F219E0CEC0036026D /* UdacityNetworkingManager.swift in Sources */,
 				14AC5D04219DF47E0036026D /* LoginViewController.swift in Sources */,
+				14AC5D1D219E0C0B0036026D /* NetworkManager.swift in Sources */,
+				14AC5D21219EA7C00036026D /* AppValues.swift in Sources */,
 				14AC5D02219DF47E0036026D /* AppDelegate.swift in Sources */,
 				14AC5D19219DF6FB0036026D /* Constants.swift in Sources */,
 			);

@@ -13,6 +13,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailTextfield: UITextField!
     @IBOutlet weak var passwordTextfield: UITextField!
     @IBOutlet weak var logInButton: UIButton!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,8 +28,32 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func logInPressed(_ sender: Any) {
+        if (emailTextfield.text?.isEmpty)! || (passwordTextfield.text?.isEmpty)!{
+            showAlarm(message: "Empty email/password fields")
+            return
+        }
+        activityIndicator.startAnimating()
+        let manager = UdacityNetworkingManager()
+        manager.login(email: emailTextfield.text!, password: passwordTextfield.text!) { (id, error) in
+            DispatchQueue.main.async {
+                self.activityIndicator.stopAnimating()
+            }
+            if let error = error{
+                DispatchQueue.main.async {
+                    self.showAlarm(message: error)
+                }
+                
+            }
+            //perform segue
+            
+        }
     }
     
+    func showAlarm(message : String){
+        let alarm = UIAlertController(title: "", message: message, preferredStyle: .alert)
+        alarm.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alarm, animated: true, completion: nil)
+    }
     
 }
 

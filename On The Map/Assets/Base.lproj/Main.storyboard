@@ -72,6 +72,9 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Anb-Db-ELp">
+                                <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -81,12 +84,15 @@
                             <constraint firstItem="8Yi-Bp-fW6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FFj-ie-Fqr"/>
                             <constraint firstItem="LVl-Ws-fyL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Jfa-Tc-8gb"/>
                             <constraint firstItem="8Yi-Bp-fW6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="N1W-jr-MhU"/>
+                            <constraint firstItem="Anb-Db-ELp" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="NTr-sB-1YL"/>
+                            <constraint firstItem="Anb-Db-ELp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="j7C-Hl-HDe"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LVl-Ws-fyL" secondAttribute="trailing" constant="50" id="pJt-R0-7df"/>
                             <constraint firstItem="EPi-ow-o1b" firstAttribute="top" secondItem="LVl-Ws-fyL" secondAttribute="bottom" constant="8" id="zzA-JY-RXb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="Anb-Db-ELp" id="Lzl-lB-W9Q"/>
                         <outlet property="emailTextfield" destination="26F-e1-wYi" id="Cpb-Ya-jSy"/>
                         <outlet property="logInButton" destination="LDc-6G-yN5" id="WE6-z2-fCF"/>
                         <outlet property="passwordTextfield" destination="774-xw-HaE" id="pgO-Ka-ihR"/>
