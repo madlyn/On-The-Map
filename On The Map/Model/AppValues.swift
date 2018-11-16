@@ -10,4 +10,5 @@ import Foundation
 
 struct AppValues {
     static var sessionID : String!
+    static var locations : [StudentLocation]!
 }

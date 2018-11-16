@@ -58,5 +58,44 @@ class NetworkManager{
         task.resume()
     }
     
+    func getMethod(url : URL, completionHandler: @escaping (_ result: [String:AnyObject]?, _ error: String?) -> Void){
+        var request = URLRequest(url: url)
+        request.setValue(Constants.ParseApplicationId, forHTTPHeaderField: Constants.HTTPHeaderFieldParameterKeys.ApplicationID)
+        request.setValue(Constants.RESTAPIKey, forHTTPHeaderField: Constants.HTTPHeaderFieldParameterKeys.RESTAPIKey)
+        let task = session.dataTask(with: request) { (data, response, error) in
+            print(response)
+            /* GUARD: Was there an error? */
+            guard (error == nil) else {
+                completionHandler(nil, error?.localizedDescription)
+                return
+            }
+            
+            /* GUARD: Did we get a successful 2XX response? */
+            guard let statusCode = (response as? HTTPURLResponse)?.statusCode, statusCode >= 200 && statusCode <= 299 else {
+                print("Request returned a status code other than 2xx!")
+                completionHandler(nil, "Request returned a status code other than 2xx!")
+                return
+            }
+            
+            /* GUARD: Was there any data returned? */
+            guard let data = data else {
+                print("No Data Retrieved")
+                completionHandler(nil, "No Data Retrieved")
+                return
+            }
+            do{
+                let object = try JSONSerialization.jsonObject(with: data, options: .allowFragments) as! [String : AnyObject]
+                completionHandler(object,nil)
+                
+            } catch{
+                print("Could not parse data")
+                completionHandler(nil, "Could not parse data")
+                return
+            }
+            
+        }
+        task.resume()
+    }
+    
    
 }

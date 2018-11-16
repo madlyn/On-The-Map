@@ -42,10 +42,12 @@ class LoginViewController: UIViewController {
                 DispatchQueue.main.async {
                     self.showAlarm(message: error)
                 }
-                
+            } else{
+                DispatchQueue.main.async {
+                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "mainNav") as! UINavigationController
+                    self.present(vc, animated: true, completion: nil)
+                }
             }
-            //perform segue
-            
         }
     }
     

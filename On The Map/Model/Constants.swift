@@ -32,6 +32,7 @@ class Constants{
         // MARK: Parse
         static let ObjectId = "objectId"
         static let UniqueKey = "uniqueKey"
+        static let Results = "results"
         static let FirstName = "firstName"
         static let LastName = "lastName"
         static let MapString = "mapString"

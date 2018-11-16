@@ -15,7 +15,16 @@ class StudentLocation{
     var lastName: String!
     var mapString: String!
     var mediaURL: String!
-    var latitude: String!
-    var longitude: String!
-    
+    var latitude: Double!
+    var longitude: Double!
+//    init(objectId : String, uniqueKey: String, firstName: String, lastName: String, mapString: String, mediaURL: String, latitude: Double, longitude: Double){
+//        self.objectId = objectId
+//        self.uniqueKey = uniqueKey
+//        self.firstName = firstName
+//        self.lastName = lastName
+//        self.mapString = mapString
+//        self.mediaURL = mediaURL
+//        self.latitude = latitude
+//        self.longitude = longitude
+//    }
 }
