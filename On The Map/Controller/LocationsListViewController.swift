@@ -32,9 +32,16 @@ class LocationsListViewController: UIViewController, UITableViewDelegate, UITabl
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "locationCell") as! UITableViewCell
         cell.textLabel?.text = AppValues.locations[indexPath.row].firstName + " " + AppValues.locations[indexPath.row].lastName
-        cell.detailTextLabel?.text = AppValues.locations[indexPath.row].mapString
+        cell.detailTextLabel?.text = AppValues.locations[indexPath.row].mediaURL
         cell.imageView?.image = UIImage(named: "icon_pin")
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let app = UIApplication.shared
+        if let toOpen = AppValues.locations[indexPath.row].mediaURL {
+            app.openURL(URL(string: toOpen)!)
+        }
     }
     
 
