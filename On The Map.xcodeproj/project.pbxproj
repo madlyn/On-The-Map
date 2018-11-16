@@ -20,6 +20,7 @@
 		14AC5D23219EB6FA0036026D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AC5D22219EB6FA0036026D /* MapViewController.swift */; };
 		14AC5D26219EC4A20036026D /* ParseNetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AC5D25219EC4A20036026D /* ParseNetworkingManager.swift */; };
 		14AC5D28219ED3BA0036026D /* LocationsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AC5D27219ED3BA0036026D /* LocationsListViewController.swift */; };
+		14AC5D2C219F5C5D0036026D /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AC5D2B219F5C5D0036026D /* TabBarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		14AC5D22219EB6FA0036026D /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		14AC5D25219EC4A20036026D /* ParseNetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseNetworkingManager.swift; sourceTree = "<group>"; };
 		14AC5D27219ED3BA0036026D /* LocationsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsListViewController.swift; sourceTree = "<group>"; };
+		14AC5D2B219F5C5D0036026D /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				14AC5D03219DF47E0036026D /* LoginViewController.swift */,
 				14AC5D22219EB6FA0036026D /* MapViewController.swift */,
 				14AC5D27219ED3BA0036026D /* LocationsListViewController.swift */,
+				14AC5D2B219F5C5D0036026D /* TabBarViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 			files = (
 				14AC5D17219DF6440036026D /* StudentLocation.swift in Sources */,
 				14AC5D1F219E0CEC0036026D /* UdacityNetworkingManager.swift in Sources */,
+				14AC5D2C219F5C5D0036026D /* TabBarViewController.swift in Sources */,
 				14AC5D26219EC4A20036026D /* ParseNetworkingManager.swift in Sources */,
 				14AC5D04219DF47E0036026D /* LoginViewController.swift in Sources */,
 				14AC5D1D219E0C0B0036026D /* NetworkManager.swift in Sources */,
