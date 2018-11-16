@@ -21,6 +21,8 @@
 		14AC5D26219EC4A20036026D /* ParseNetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AC5D25219EC4A20036026D /* ParseNetworkingManager.swift */; };
 		14AC5D28219ED3BA0036026D /* LocationsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AC5D27219ED3BA0036026D /* LocationsListViewController.swift */; };
 		14AC5D2C219F5C5D0036026D /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AC5D2B219F5C5D0036026D /* TabBarViewController.swift */; };
+		14AC5D2E219F747A0036026D /* AddLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AC5D2D219F747A0036026D /* AddLocationViewController.swift */; };
+		14AC5D30219F76540036026D /* AddLocationMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AC5D2F219F76540036026D /* AddLocationMapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		14AC5D25219EC4A20036026D /* ParseNetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseNetworkingManager.swift; sourceTree = "<group>"; };
 		14AC5D27219ED3BA0036026D /* LocationsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsListViewController.swift; sourceTree = "<group>"; };
 		14AC5D2B219F5C5D0036026D /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		14AC5D2D219F747A0036026D /* AddLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationViewController.swift; sourceTree = "<group>"; };
+		14AC5D2F219F76540036026D /* AddLocationMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationMapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,8 @@
 				14AC5D22219EB6FA0036026D /* MapViewController.swift */,
 				14AC5D27219ED3BA0036026D /* LocationsListViewController.swift */,
 				14AC5D2B219F5C5D0036026D /* TabBarViewController.swift */,
+				14AC5D2D219F747A0036026D /* AddLocationViewController.swift */,
+				14AC5D2F219F76540036026D /* AddLocationMapViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -209,6 +215,8 @@
 				14AC5D04219DF47E0036026D /* LoginViewController.swift in Sources */,
 				14AC5D1D219E0C0B0036026D /* NetworkManager.swift in Sources */,
 				14AC5D21219EA7C00036026D /* AppValues.swift in Sources */,
+				14AC5D2E219F747A0036026D /* AddLocationViewController.swift in Sources */,
+				14AC5D30219F76540036026D /* AddLocationMapViewController.swift in Sources */,
 				14AC5D02219DF47E0036026D /* AppDelegate.swift in Sources */,
 				14AC5D19219DF6FB0036026D /* Constants.swift in Sources */,
 				14AC5D23219EB6FA0036026D /* MapViewController.swift in Sources */,

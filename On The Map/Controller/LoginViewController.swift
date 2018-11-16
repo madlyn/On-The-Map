@@ -21,6 +21,11 @@ class LoginViewController: UIViewController {
         logInButton.layer.cornerRadius = 5
         logInButton.clipsToBounds = true
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        passwordTextfield.text = ""
+    }
 
     @IBAction func signUpPressed(_ sender: Any) {
         guard let url = URL(string: "https://auth.udacity.com/sign-up") else { return }

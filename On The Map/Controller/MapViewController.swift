@@ -24,6 +24,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         tabVC.logoutButton.action = #selector(logout)
         tabVC.addLocationButton.target = self
         tabVC.refreshButton.target = self
+        tabVC.logoutButton.target = self
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -47,11 +48,13 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     }
     
     @objc func addLocation(){
+        let nav = storyboard?.instantiateViewController(withIdentifier: "addLocationNav") as! UINavigationController
+        self.present(nav, animated: true, completion: nil)
         
     }
     
     @objc func logout(){
-        
+        self.dismiss(animated: true, completion: nil)
     }
     func showAlarm(message : String){
         let alarm = UIAlertController(title: "", message: message, preferredStyle: .alert)
