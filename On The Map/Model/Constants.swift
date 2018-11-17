@@ -39,11 +39,16 @@ class Constants{
         static let MediaURL = "mediaURL"
         static let Latitude = "latitude"
         static let Longitude = "longitude"
+        static let nickname = "nickname"
         // MARK: Udacity
         static let Account = "account"
         static let Registered = "registered"
         static let Session = "session"
         static let SessionID = "id"
+        static let AccountID = "key"
+        static let UserFirstName = "first_name"
+        static let UserLastName = "last_name"
+        static let User = "user"
     }
     
     struct ParameterKeys{

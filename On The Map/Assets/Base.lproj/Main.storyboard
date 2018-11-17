@@ -232,13 +232,13 @@
                                         <rect key="frame" x="0.0" y="0.0" width="275" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" textContentType="email"/>
+                                        <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a Website" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tOC-vh-3iu">
                                         <rect key="frame" x="0.0" y="38" width="275" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                        <textInputTraits key="textInputTraits" textContentType="url"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8fG-bK-uFX">
                                         <rect key="frame" x="0.0" y="76" width="275" height="30"/>
@@ -246,6 +246,9 @@
                                         <state key="normal" title="FIND LOCATION">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="findLocation:" destination="9hG-sn-S8p" eventType="touchUpInside" id="341-ZU-3Db"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -270,6 +273,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="findLocationButton" destination="8fG-bK-uFX" id="xn0-WE-b6k"/>
+                        <outlet property="locationTextfield" destination="C0r-jz-wim" id="Q8S-yh-WDD"/>
+                        <outlet property="websiteTextfield" destination="tOC-vh-3iu" id="AZZ-sn-Jmt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Afv-oF-tOU" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -279,7 +284,7 @@
         <!--Add Location Map View Controller-->
         <scene sceneID="zcG-dX-RYT">
             <objects>
-                <viewController id="kZn-MW-hNj" customClass="AddLocationMapViewController" customModule="On_The_Map" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="locationMapVC" id="kZn-MW-hNj" customClass="AddLocationMapViewController" customModule="On_The_Map" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CYZ-FF-O8d">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -310,6 +315,7 @@
                     </view>
                     <connections>
                         <outlet property="finishButton" destination="Ubu-G2-5Io" id="tcE-Ae-UZr"/>
+                        <outlet property="map" destination="RSl-hK-XLT" id="zpN-Hw-PkU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="grC-ml-iDc" userLabel="First Responder" sceneMemberID="firstResponder"/>

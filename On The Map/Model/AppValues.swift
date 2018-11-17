@@ -10,23 +10,20 @@ import Foundation
 
 class AppValues {
     static var delegate : AppValuesDelegate?
-    static var sessionID : String!
+    static var currentUser = User()
     private static var locations = [StudentLocation]()
     
     static func setLocations(locations:[StudentLocation]) {
-        print("set location")
         self.locations = locations
         if let delegate = delegate{
             delegate.appValuesDidChange()
         }
     }
     
- 
     static func getLocations()->[StudentLocation]{
         return locations
     }
 }
-
 
 protocol AppValuesDelegate : class{
     func appValuesDidChange()

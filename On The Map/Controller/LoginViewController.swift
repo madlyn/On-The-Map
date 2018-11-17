@@ -39,7 +39,7 @@ class LoginViewController: UIViewController {
         }
         activityIndicator.startAnimating()
         let manager = UdacityNetworkingManager()
-        manager.login(email: emailTextfield.text!, password: passwordTextfield.text!) { (id, error) in
+        manager.login(email: emailTextfield.text!, password: passwordTextfield.text!) { (error) in
             DispatchQueue.main.async {
                 self.activityIndicator.stopAnimating()
             }
@@ -49,10 +49,21 @@ class LoginViewController: UIViewController {
                 }
             } else{
                 DispatchQueue.main.async {
+                    self.getUserInfo()
                     let vc = self.storyboard?.instantiateViewController(withIdentifier: "mainNav") as! UINavigationController
                     self.present(vc, animated: true, completion: nil)
                 }
             }
+        }
+    }
+    
+    func getUserInfo(){
+        let manager = UdacityNetworkingManager()
+        manager.getUserData { (error) in
+            if error != nil{
+                print("Could not retrieve user data")
+            }
+            
         }
     }
     

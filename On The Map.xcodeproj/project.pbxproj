@@ -23,6 +23,7 @@
 		14AC5D2C219F5C5D0036026D /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AC5D2B219F5C5D0036026D /* TabBarViewController.swift */; };
 		14AC5D2E219F747A0036026D /* AddLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AC5D2D219F747A0036026D /* AddLocationViewController.swift */; };
 		14AC5D30219F76540036026D /* AddLocationMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AC5D2F219F76540036026D /* AddLocationMapViewController.swift */; };
+		14AC5D3221A045F00036026D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14AC5D3121A045F00036026D /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		14AC5D2B219F5C5D0036026D /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		14AC5D2D219F747A0036026D /* AddLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationViewController.swift; sourceTree = "<group>"; };
 		14AC5D2F219F76540036026D /* AddLocationMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationMapViewController.swift; sourceTree = "<group>"; };
+		14AC5D3121A045F00036026D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 				14AC5D16219DF6440036026D /* StudentLocation.swift */,
 				14AC5D18219DF6FB0036026D /* Constants.swift */,
 				14AC5D20219EA7C00036026D /* AppValues.swift */,
+				14AC5D3121A045F00036026D /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 				14AC5D26219EC4A20036026D /* ParseNetworkingManager.swift in Sources */,
 				14AC5D04219DF47E0036026D /* LoginViewController.swift in Sources */,
 				14AC5D1D219E0C0B0036026D /* NetworkManager.swift in Sources */,
+				14AC5D3221A045F00036026D /* User.swift in Sources */,
 				14AC5D21219EA7C00036026D /* AppValues.swift in Sources */,
 				14AC5D2E219F747A0036026D /* AddLocationViewController.swift in Sources */,
 				14AC5D30219F76540036026D /* AddLocationMapViewController.swift in Sources */,
@@ -366,7 +370,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K3EFN5LZ9N;
 				INFOPLIST_FILE = "On The Map/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -374,6 +380,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lynmasri.On-The-Map";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -383,7 +390,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K3EFN5LZ9N;
 				INFOPLIST_FILE = "On The Map/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -391,6 +400,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lynmasri.On-The-Map";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
