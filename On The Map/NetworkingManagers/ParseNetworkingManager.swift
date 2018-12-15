@@ -90,12 +90,36 @@ class ParseNetworkingManager {
         components.scheme = Constants.ApiScheme
         components.host = Constants.ParseApiHost
         components.path = Constants.ParseApiPath + (withPathExtension ?? "")
+        if !parameters.isEmpty{
         components.queryItems = [URLQueryItem]()
         
         for (key, value) in parameters {
             let queryItem = URLQueryItem(name: key, value: "\(value)")
             components.queryItems!.append(queryItem)
         }
+        }
         return components.url!
+    }
+    
+    func postLocation(mapString: String, mediaURL : String, latitude : Double, longitude : Double, completionHandler: @escaping ( _ error: String?) -> Void){
+        let manager = NetworkManager()
+        let url = URLFromParameters([:], withPathExtension: Constants.APIMethods.StudentLocation)
+        let parameters = [
+            Constants.JSONResponseKeys.UniqueKey : AppValues.currentUser.accountKey,
+            Constants.JSONResponseKeys.FirstName : AppValues.currentUser.nickName,
+            Constants.JSONResponseKeys.LastName : "Doe",
+            Constants.JSONResponseKeys.MapString : mapString,
+            Constants.JSONResponseKeys.MediaURL : mediaURL,
+            Constants.JSONResponseKeys.Latitude : latitude,
+            Constants.JSONResponseKeys.Longitude : longitude
+        ] as! [String:AnyObject]
+        manager.postMethod(url: url, parameters: parameters) { (object, error) in
+            
+            guard error == nil else{
+                completionHandler(error)
+                return
+            }
+            completionHandler(nil)
+        }
     }
 }

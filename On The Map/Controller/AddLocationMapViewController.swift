@@ -13,10 +13,14 @@ class AddLocationMapViewController: UIViewController, MKMapViewDelegate{
     
     @IBOutlet weak var map: MKMapView!
     @IBOutlet weak var finishButton: UIButton!
-    var request = MKLocalSearch.Request()
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
+    var request = MKLocalSearch.Request()
     var locationString : String?
     var website : String?
+    var lat : Double!
+    var long : Double!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Add Location"
@@ -25,19 +29,23 @@ class AddLocationMapViewController: UIViewController, MKMapViewDelegate{
         request.naturalLanguageQuery = locationString
         map.delegate = self
         let search = MKLocalSearch(request: request)
-        
+        activityIndicator.startAnimating()
         search.start(completionHandler: {(response, error) in
-            
+            self.activityIndicator.stopAnimating()
             if error != nil {
                 print("Could Not Find Location: \(self.locationString)")
+                self.presentAlarm(message: "Could Not Find Location: \(self.locationString)")
             } else if response!.mapItems.count == 0 {
                 print("Could Not Find Location: \(self.locationString)")
+                self.presentAlarm(message: "Could Not Find Location: \(self.locationString)")
             } else {
                 let item = response?.mapItems[0]
                 let annotation = MKPointAnnotation()
                 annotation.coordinate = item!.placemark.coordinate
                 annotation.title = item!.name
                 annotation.title = self.locationString
+                self.lat = item!.placemark.coordinate.latitude
+                self.long = item!.placemark.coordinate.longitude
                 self.map.addAnnotation(annotation)
                 self.map.region = (response?.boundingRegion)!
             }
@@ -58,5 +66,27 @@ class AddLocationMapViewController: UIViewController, MKMapViewDelegate{
         }
         return pinView
     }
+    
+    @IBAction func addLocation(_ sender: Any) {
+        activityIndicator.startAnimating()
+        let manager = ParseNetworkingManager()
+        manager.postLocation(mapString: locationString!, mediaURL: website!, latitude: lat, longitude: long) { (error) in
+            self.activityIndicator.stopAnimating()
+            if let error = error{
+                self.presentAlarm(message: error);
+            }else{
+                self.navigationController?.dismiss(animated: true, completion: nil)
+            }
+        }
+    }
+    
+    func presentAlarm(message : String){
+        let alarm = UIAlertController(title: "", message: message, preferredStyle: .alert)
+        alarm.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
+            self.navigationController?.popViewController(animated: true)
+        }))
+        self.present(alarm, animated: true)
+    }
+    
     
 }

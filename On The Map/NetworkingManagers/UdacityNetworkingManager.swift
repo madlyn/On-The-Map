@@ -16,7 +16,7 @@ class UdacityNetworkingManager{
         let parameters = [
             Constants.ParameterKeys.Udacity : udacityDict] as [String:AnyObject]
         
-        manager.postMethod(url: URLFromParameters( withPathExtension: Constants.APIMethods.Session), parameters: parameters) { (object, error) in
+        manager.udacityPostMethod(url: URLFromParameters( withPathExtension: Constants.APIMethods.Session), parameters: parameters) { (object, error) in
             guard error == nil else{
                 completionHandler(error)
                 return

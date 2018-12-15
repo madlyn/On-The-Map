@@ -298,10 +298,18 @@
                                 <state key="normal" title="FINISH">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="addLocation:" destination="kZn-MW-hNj" eventType="touchUpInside" id="Oto-sJ-7kW"/>
+                                </connections>
                             </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="2FD-pC-ZVX">
+                                <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="2FD-pC-ZVX" firstAttribute="centerX" secondItem="CYZ-FF-O8d" secondAttribute="centerX" id="A1E-0M-p7Z"/>
+                            <constraint firstItem="2FD-pC-ZVX" firstAttribute="centerY" secondItem="CYZ-FF-O8d" secondAttribute="centerY" id="OdW-if-EQJ"/>
                             <constraint firstItem="RSl-hK-XLT" firstAttribute="top" secondItem="BKK-f8-0li" secondAttribute="top" id="R2I-9N-Zdx"/>
                             <constraint firstItem="RSl-hK-XLT" firstAttribute="leading" secondItem="BKK-f8-0li" secondAttribute="leading" id="VFv-oH-M7b"/>
                             <constraint firstItem="Ubu-G2-5Io" firstAttribute="leading" secondItem="BKK-f8-0li" secondAttribute="leading" constant="50" id="Zh6-4X-wRw"/>
@@ -314,6 +322,7 @@
                         <viewLayoutGuide key="safeArea" id="BKK-f8-0li"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="2FD-pC-ZVX" id="l3r-wP-Pun"/>
                         <outlet property="finishButton" destination="Ubu-G2-5Io" id="tcE-Ae-UZr"/>
                         <outlet property="map" destination="RSl-hK-XLT" id="zpN-Hw-PkU"/>
                     </connections>
